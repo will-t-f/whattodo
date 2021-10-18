@@ -23,6 +23,6 @@ install:
 	mkdir -p ~/.config/whattodo/
 	touch ~/.config/whattodo/main.todo
 	export PATH=$PATH:~/bin
-	source ~/.bashrc
+	source ~/.profile
 
 .PHONY: all clean
