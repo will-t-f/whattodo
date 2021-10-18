@@ -4,8 +4,8 @@ FILE := Main
 SRCE := $(FILE).java
 COMP := javac
 
-APPNAME := whattodo
-COMMAND := ~/bin/$(APPNAME)
+APPNAME := script
+COMMAND := ~/bin/whattodo
 
 all:
 	$(COMP) $(SRCE)
@@ -17,7 +17,7 @@ install:
 	cp $(APPNAME) $(COMMAND)
 	mkdir -p $(DESTDIR)
 	sed -i 's|#####|'$(DESTDIR)'|' $(COMMAND)
-	chmod +x $(APPNAME)
+	chmod +x $(COMMAND)
 	find . -name "*.class" -exec cp {} $(DESTDIR) \;
 	mkdir -p ~/.config/$(APPNAME)/
 	touch ~/.config/$(APPNAME)/main.todo
