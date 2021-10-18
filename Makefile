@@ -5,7 +5,7 @@ SRCE := $(FILE).java
 COMP := javac
 
 APPNAME := script
-COMMAND := ~/bin/whattodo
+COMMAND := /usr/bin/whattodo
 
 all:
 	$(COMP) $(SRCE)
@@ -14,7 +14,7 @@ clean:
 	rm -f *.class
 
 install:
-	mkdir -p ~/bin
+	mkdir -p /usr/bin
 	cp $(APPNAME) $(COMMAND)
 	mkdir -p $(DESTDIR)
 	sed -i 's|#####|'$(DESTDIR)'|' $(COMMAND)
