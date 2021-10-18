@@ -5,7 +5,7 @@ SRCE := $(FILE).java
 COMP := javac
 
 APPNAME := script
-COMMAND := /usr/bin/whattodo
+COMMAND := ~/bin/whattodo
 
 all:
 	$(COMP) $(SRCE)
@@ -14,7 +14,7 @@ clean:
 	rm -f *.class
 
 install:
-	mkdir -p /usr/bin
+	mkdir -p ~/bin
 	cp $(APPNAME) $(COMMAND)
 	mkdir -p $(DESTDIR)
 	sed -i 's|#####|'$(DESTDIR)'|' $(COMMAND)
@@ -22,5 +22,7 @@ install:
 	find . -name "*.class" -exec cp {} $(DESTDIR) \;
 	mkdir -p ~/.config/whattodo/
 	touch ~/.config/whattodo/main.todo
+	export PATH=$PATH:~/bin
+	source ~/.bashrc
 
 .PHONY: all clean
