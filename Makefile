@@ -24,6 +24,7 @@ install:
 	touch ~/.config/whattodo/main.todo
 	export PATH=$PATH:~/bin
 	touch ~/.profile
-	source ~/.profile
+	touch ~/.bashrc
+	echo "source ~/.profile" >> ~/.bashrc
 
 .PHONY: all clean
