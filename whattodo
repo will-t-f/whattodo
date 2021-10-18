@@ -1,0 +1,5 @@
+#!/bin/sh
+APP_HOME="#####"
+CLASS_NAME="Main"
+cd $APP_HOME
+java $CLASS_NAME $*
