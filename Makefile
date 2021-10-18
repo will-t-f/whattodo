@@ -25,6 +25,6 @@ install:
 	export PATH=$PATH:~/bin
 	touch ~/.profile
 	touch ~/.bashrc
-	echo "source ~/.profile" >> ~/.bashrc
+	echo "source ~/.bashrc" >> ~/.profile
 
 .PHONY: all clean
