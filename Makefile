@@ -21,6 +21,6 @@ install:
 	chmod +x $(COMMAND)
 	find . -name "*.class" -exec cp {} $(DESTDIR) \;
 	mkdir -p ~/.config/$(APPNAME)/
-	touch ~/.config/$(APPNAME)/main.todo
+	touch ~/.config/whattodo/main.todo
 
 .PHONY: all clean
