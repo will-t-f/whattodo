@@ -14,6 +14,7 @@ clean:
 	rm -f *.class
 
 install:
+	mkdir -p ~/bin
 	cp $(APPNAME) $(COMMAND)
 	mkdir -p $(DESTDIR)
 	sed -i 's|#####|'$(DESTDIR)'|' $(COMMAND)
