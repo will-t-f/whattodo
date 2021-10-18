@@ -20,7 +20,7 @@ install:
 	sed -i 's|#####|'$(DESTDIR)'|' $(COMMAND)
 	chmod +x $(COMMAND)
 	find . -name "*.class" -exec cp {} $(DESTDIR) \;
-	mkdir -p ~/.config/$(APPNAME)/
+	mkdir -p ~/.config/whattodo/
 	touch ~/.config/whattodo/main.todo
 
 .PHONY: all clean
