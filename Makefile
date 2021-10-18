@@ -23,8 +23,7 @@ install:
 	mkdir -p ~/.config/whattodo/
 	touch ~/.config/whattodo/main.todo
 	export PATH=$PATH:~/bin
-	touch ~/.profile
 	touch ~/.bashrc
-	echo "source ~/.bashrc" >> ~/.profile
+	echo "alias whattodo=\"~/bin/whattodo\"" >> ~/.bashrc
 
 .PHONY: all clean
